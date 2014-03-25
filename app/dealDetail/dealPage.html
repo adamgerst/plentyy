@@ -1,0 +1,70 @@
+<ion-view title="'Deal Detail'" left-buttons="backTo">
+  <ion-nav-bar type="bar"></ion-nav-bar>
+  <ion-content scroll="true" has-header="true">
+  
+    <div class="img-container" ng-background="{{deal.dealId}}" >
+      <div ng-if="!deal.confCode" class="img-container-topright">
+        <div class="div2">${{deal.dealPrice }}</div>
+        <div class="div1">
+          <span>{{ deal.quantity }} left</span>
+          <span>${{deal.originalPrice }}</span>
+        </div>
+      </div>
+
+      <div ng-if="deal.confCode" class="img-container-active-top">
+        <div class="row">
+          <div class="col"> 
+            <span>Confirm. Code </span>
+            <span>{{deal.confCode}} </span>
+          </div>
+          <div class="col">
+            <span> Time to pickup </span>
+            <div id="deal-time" deal-timer> </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-container-bot">
+        <h1>{{ deal.merchantBusinessName }}</h1>
+        <span>{{ deal.distance }} mi.</span>
+      </div>
+    </div> 
+
+    <div class="deal-info">
+      <span ng-if="!deal.confCode">  Deal expires in <span id="deal-timer"deal-timer> </span> </span>
+      <span> {{deal.description}} </span>
+    </div>
+    <div id="map-wrapper" ng-controller="mapCtrl">
+      <map id="map_canvas"> Loading 
+      </map>
+      <button id="map-button" class="button icon ion-map" ng-click="goTo('directions')"></button>
+    </div>
+    <div class="merch-detail">
+      <span> {{merch.businessName}} </span>
+      <span> {{merch.address1}}  {{merch.city}}, {{merch.state}}   </span>
+      <span> {{merch.phone}} </span>
+    </div>
+    
+    <div class="padding">
+      <button ng-if="!deal.confCode" class="button button-block button-confirm icon-left ion-checkmark-round" ng-click="claim()">Claim Now</button>
+      <a ng-if="deal.activeTrans" href="#/main/offersFeed" class="button button-full button-confirm" >
+        Back to Deals Page
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>
+
+<!-- Modal for claimed deal with failed auth --> 
+<script id='auth.html' type="text/ng-template">
+  <div class="modal">
+    <div class="bar bar-header">
+      <h1 class="title">Sign In Required</h1>
+    </div>
+    <ion-content padding="true" has-header="true">
+      <h2>Please log in with Facebook to continue..</h2>
+      <a class="button button-full button-assertive" ng-click="fblogin()">Login With Facebook</a>
+      <a class="button button-clear cancel" ng-click="closeModal()">Cancel</a>
+    </ion-content>    
+  </div>
+</script>

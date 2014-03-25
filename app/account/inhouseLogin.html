@@ -1,0 +1,16 @@
+<ion-view title="'Sign In'" left-buttons="backTo">
+  <ion-nav-bar></ion-nav-bar>
+  <ion-content has-header="true" padding="true">
+    <form name="inhouse" class="list">
+    	<label class="item item-input formInput">
+    		<input type="email" name= "email" placeholder="Email Address" ng-model="login.email" required>
+    	</label>
+    	<span class="error" ng-show="inhouse.email.$error.email">
+        Please enter a valid email address</span>
+    	<label class="item item-input formInput">
+    		<input type="password" name="password" placeholder="Password" ng-model="login.pass" ng-minlength="6" required>
+    	</label>
+    	<input type="submit" class=" submit button button-assertive logInButton" value="LOG IN" ng-click="login(login)" ng-disabled="inhouse.$invalid">
+    </form>
+  </ion-content>
+</ion-view>  

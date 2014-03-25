@@ -1,0 +1,52 @@
+
+<ion-view title="'Plentyy Deals'" left-buttons="openNav" right-buttons="openFilter">
+  <ion-content has-header="true" on-refresh="onRefresh()" class ="deal-feed">
+  <ion-refresher ></ion-refresher>
+
+    <ion-list class="live-feed">
+      <ion-item ng-repeat="deal in transDeals | orderBy:'distance'"  >
+        <div class="img-container" ng-background="{{deal.dealId}}" ng-click="goToDeal('dealPage', {{deal}})">
+          <div class="img-container-active-top">
+            <div class="row">
+              <div class="col"> 
+                <span> Confirm. Code </span>
+                <span> {{deal.confCode}} </span>
+              </div>
+              <div class="col">
+                <span> Time to pickup </span>
+                <div deal-timer id="deal-timer"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="img-container-bot">
+            <h1>{{ deal.merchantBusinessName }}</h1>
+            <span>{{ deal.distance }} mi. </span>
+          </div>
+        </div>  
+      </ion-item>
+
+      <ion-item ng-controller="singleDealCtrl" ng-repeat="deal in deals | filter: priceFilter | orderBy:'distance'" >        
+      	<div class="img-container" ng-background="{{deal.dealId}}" ng-click="goToDeal('dealPage', {{deal}})">
+          <div class="img-container-topright">
+            <div class="div2"> ${{deal.dealPrice }}</div>
+            <div class="div1">
+              <span> {{ deal.quantity }} left</span>
+              <span>${{deal.originalPrice }}</span>
+            </div>
+          </div>
+          <div class="img-container-bot">
+            <h1>{{ deal.merchantBusinessName }}</h1>
+            <span>{{ deal.distance }} mi.</span>
+          </div>
+        </div>  
+      </ion-item>
+
+    </ion-list>
+  </ion-content>    
+</ion-view>
+
+<script id='modal.html' type="text/ng-template">
+  <div class="modal">
+    <div app-modal></div>
+  </div>
+</script>

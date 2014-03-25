@@ -1,0 +1,15 @@
+<ion-view title="'Transaction History'" ng-init="getTransactions()" left-buttons="openNav">
+  <ion-content has-header="true" padding="true">
+    <ion-list>
+      <ion-item ng-repeat="transaction in transactions">
+        <ul class="padding">
+          <li>Merchant: {{ transaction.merchantBusinessName }}</li>
+          <li>Deal: {{ transaction.description }}</li>
+          <li>Price: ${{ transaction.dealPrice }}</li>
+          <li>Quantity: {{ transaction.quantity }}</li>
+          <li>Status: {{ transaction.status }}</li>
+        </ul>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

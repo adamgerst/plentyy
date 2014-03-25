@@ -1,0 +1,21 @@
+<ion-view title="'Confirmation'">
+  <ion-nav-bar type="bar"></ion-nav-bar>
+  <ion-content scroll="true" has-header="true" padding="true">
+    <div class="terms-container">
+      <p>By clicking the button below, you are agreeing to be bound by the terms and conditions (“Terms of Service”) set up by. Any new features or tools which are added to the current Service shall be also subject to the Terms of Service. You can review the most current version of the Terms of Service at any time at here. Shopify reserves the right to update and change the Terms of Service by posting updates and changes to the Shopify website. You are advised to check the Terms of Service from time to time for any updates or changes that may impact you.</p>
+      <p>Everyday language summaries are provided for your benefit and are not legally binding. Please read the “Terms of Service” for the complete picture of your legal requirements. By using Shopify or any Shopify services, you are agreeing to these terms. Be sure to occasionally check back for updates.</p>
+    </div>
+    <div>
+      <label class="checkbox assertive">
+        <input type="checkbox" ng-model="confirmed">
+      </label>
+      <em>I agree to the legal statement above</em>
+    </div>
+    <div class="confirm-container"> 
+      <p>Pay with:</p>
+      <button class="button button-block button-confirm icon-left ion-checkmark-round" ng-disabled="!confirmed" ng-click="submitPay()">My Registered Credit Card</button>
+      <button class="button button-block button-confirm icon-left ion-checkmark-round" ng-disabled="!confirmed" ng-click="submitPay()">Another Credit Card</button>
+      <button class="button button-block button-assertive icon-left ion-close-round" ng-click="cancelDeal()">Cancel Purchase</button>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view class="deal-detail" title="'Claimed Deal Detail'" left-buttons="backTo">
+  <ion-nav-bar type="bar"></ion-nav-bar>
+  <ion-content scroll="true" has-header="true">
+    <div class="congrats"> 
+      <h1>Congratulations!</h1>
+      <h2>Your confirmation code is</h2>
+      <h2>{{deal.confCode}}</h2>
+      <h3>You have <span deal-timer> </span> to pick up your deal.</h3>
+    </div>
+    <div class="img-container" ng-background="{{deal.dealId}}" >
+      <div ng-if="!deal.confCode" class="img-container-topright">
+        <div class="div2"> ${{deal.dealPrice }}</div>
+      </div>
+    </div> 
+    <div class="deal-info">
+      <span ng-if="!deal.confCode">Your deal expires in<span id="deal-timer"deal-timer> </span> </span>
+      <span>{{deal.description}}</span>
+    </div>
+    <div id="map-wrapper" ng-controller="mapCtrl">
+        <map id="map_canvas">Loading</map>
+        <button id="map-button" class="button icon ion-map" ng-click="goTo('directions')"></button>
+    </div>
+    <div class="merch-detail">
+      <span> {{merch.businessName}} </span>
+      <span> {{merch.address1}}  {{merch.city}}, {{merch.state}}</span>
+      <span> {{merch.phone}} </span>
+    </div>
+    <div class="padding">
+      <a href="#/main/offersFeed" class="button button-full button-assertive icon-left ion-arrow-left-c">Back to Deals</a>
+    </div>
+  </ion-content>
+</ion-view>

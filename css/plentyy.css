@@ -1,0 +1,317 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600);
+/* TO USE THE ABOVE USE THE PROPERTY -> font-family: 'Open Sans', sans-serif; */
+
+
+/* ---- GLOBAL STYLES ---- */
+body {
+  color: #3c3c3e;
+  background-color: #f9f3e5;
+}
+.pane,
+.scroll-content,
+.modal {
+  background-color: #f9f3e5;
+}
+h1, h2, h3, p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Buttons */
+.button.button-assertive {
+  background: linear-gradient(#ec5319, #bd4314);
+  background: -webkit-linear-gradient(#ec5319, #bd4314);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec5319), to(#bd4314));
+  border: 1px solid #bd4314;
+  border-radius: 0;
+}
+.button.button-assertive:hover,
+.button.button-assertive:active {
+  background: linear-gradient(#bd4314, #ec5319);
+  background: -webkit-linear-gradient(#bd4314, #ec5319);
+  background: -webkit-gradient(linear, left top, left bottom, from(#bd4314), to(#ec5319)); 
+}
+.button-confirm {
+  background: linear-gradient(#72aa13, #5b8811);
+  background: -webkit-linear-gradient(#72aa13, #5b8811);
+  background: -webkit-gradient(linear, left top, left bottom, from(#72aa13), to(#5b8811));
+  color: #fff;
+  border: 1px solid #5b8811;
+  border-radius: 10px;
+}
+.button-confirm:hover,
+.button-confirm:active {
+  background: linear-gradient(#5b8811, #72aa13);
+  background: -webkit-linear-gradient(#5b8811, #72aa13);
+  background: -webkit-gradient(linear, left top, left bottom, from(#5b8811), to(#72aa13));
+  color: #fff;
+}
+
+/* Forms */
+.formInput {
+  margin:10px;
+}
+
+/* ---- PAGE SPECIFIC STYLES ---- */
+
+/* Splash Screen */ 
+.loading-container {
+  margin: 20% auto;
+  position: relative;
+}
+.loading-container li {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -16px;
+  font-size: 2rem;
+}
+.loading-container h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Login / Opening page */
+.branding {
+  width: 45%;
+  margin: 20% auto 20% auto;
+  background-color: #ec5319;
+  border: 1px solid #bd4314;
+}
+.branding h1,
+.branding-message {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+.branding h1 {
+  color: #fff;
+}
+.branding-message {
+  width: 75%;
+  margin: 0 auto;
+}
+.login-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.login-container .button-bar a {
+  font-size: 0.75rem;
+}
+.login-container .button.icon:before,
+.button-confirm .button.icon:before {
+  padding-right: 10px;
+}
+.button-bar > .button:first-child,
+.button-bar > .button:last-child {
+  border-radius: 0;
+}
+
+/* Sign-up via email */
+form {
+  background-color: #f9f3e5;
+}
+
+/* Navigation Menu */
+.bar-header {
+  background: -webkit-linear-gradient(#eb5218, #e53b07);
+  background: linear-gradient(#eb5218, #e53b07);
+  background: -webkit-gradient(linear, left top, left bottom, from(#eb5218), to(#e53b07));
+  border-bottom: 1px solid #bd4314;
+}
+.title,
+.button.button-clear {
+  color: #fff;
+}
+
+/* Modals */
+.modal h2 {
+  margin: 3% 0;
+  text-align: center;
+  font-size: 1rem;
+}
+.modal .button-confirm {
+  opacity: 0.5;
+}
+.modal .button-confirm.highlight{
+  opacity: 1;
+}
+.modal .button.cancel {
+  float: right;
+  color: #3c3c3e;
+}
+
+/* Deal Confirmation */
+.terms-container p{
+  font-size: 0.75rem;
+}
+.checkbox input:before {
+  border: 1px solid #f04e23;
+}
+.checkbox input:checked:before {
+  border: 0;
+  background: #f04e23; 
+}
+
+/* Deal Completion */ 
+.congrats h1, .congrats h2, .congrats h3 {
+  text-align: center;
+}
+.congrats h1 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+.congrats h2, .congrats h3 {
+  font-size: 1.2rem;
+}
+
+/* Map */
+#map-wrapper {
+  height: 10em;
+}
+#map_canvas {
+  height: 20em;
+}
+.map#map_canvas {
+  height: 100%;
+}
+.direction#map_canvas {
+  height: 100%;
+}
+#direction-wrapper {
+  height: 40em;
+}
+.container{
+  height:100%;
+}
+
+/* Deal Feed and Deal Detail */
+.deal-feed {
+  margin-top: -6px;
+}
+.list .item-complex .item-content{
+  padding: 0;
+}
+.img-container {
+  height: 180px;
+  position: relative;
+  font-size: 1.25rem;
+  color: #080807;
+  text-shadow: 1px 1px 2px #FFFFFF, -1px -1px 2px #FFFFFF, 5px 5px 10px #EBE2D1, -5px -5px 10px #EBE2D1, 0 0 1em #f9f3e5, 0 0 .2em #f9f3e5;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.img-container-active-top{
+  width: 100%;
+  background-color: #291F18;
+  color: #EBE2D1;
+  text-shadow: 0 0 0;
+  opacity: 0.5;
+}
+.img-container-active-top .col{
+  text-align: center;
+  opacity: 1;
+}
+.img-container-active-top .col span:first-child{
+  display: block;
+  font-size: .7em;
+  margin: -6px 0 4px 0;
+}
+#deal-timer span{
+  display: inline;
+  padding: 0;
+  margin: 0;
+  font-size: .8em;
+}
+#deal-time > span {
+  display: inline;
+  font-size: 1rem;
+}
+#time-hr, #time-min{
+  font-size: .5em;
+}
+.img-container-topright {
+  position: absolute;
+  width: 80%;
+  top: 3px;
+  right: 3px;
+  margin: 1px 5px 0 0;
+}
+.img-container-topright .div1{
+  float: right;
+  padding: 4px;
+  font-size: .6em;
+  text-align: right;
+}
+.div1 span{
+  display: block;
+  padding: 0px 3px 0px 0;
+  margin: -4px 0 -4px 0;
+  font-weight: 600;   
+}
+.div1 span:last-child{
+  text-decoration: line-through;
+}
+.img-container-topright .div2{
+  float: right;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding-top: .3em;
+  font-size: 1.5em;
+}
+.img-container-bot {
+  position: absolute;
+  bottom : 5px;
+  left: 8px;
+}
+.img-container-bot h1{
+  font-size: 1.1em;
+  padding: 0 0 0px 1px;
+  margin: 0 0 0px 0;
+}
+.img-container-bot span{
+  font-size: .8em;
+  font-style: italic;
+}
+
+/* Deal detail page only */
+.deal-info{
+  font-size: 18px;
+  margin: 6px 10px 5px 10px;
+}
+.deal-info span{
+  display: block;
+  padding: 3px 0 3px 0;
+  text-align: center;
+}
+#map-wrapper{
+  position: relative;
+  margin: 8px 0 5px 0;
+}
+#map-canvas{
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+#map-button{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 10000009;
+  background: -webkit-linear-gradient(#eb5218, #e53b07);
+  border: 1px solid #bd4314;
+  color: #fff;
+}
+.merch-detail span{
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+

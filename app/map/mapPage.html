@@ -1,0 +1,15 @@
+<ion-content padding="true" scroll="true" has-bouncing="true">
+  <h1>Map of Merchant Location</h1>
+  	<div ng-app="googleMap"></div>
+		<div ng-controller="mapCtrl">
+			<div ng-if='geo'>
+			<map id="map_canvas"> Loading </map>
+			</div>
+		</div>
+
+  <div class="button-bar">  
+    <button class="button button-light" ng-click="goTo('directions')">Get Directions</button>
+    <button class="button button-light" ng-click="goTo('dealPage')">Deal Page</button>
+    <button class="button button-light" ng-click="goTo('offersFeed')">Live Feed</button>
+  </div>
+</ion-content>

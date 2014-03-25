@@ -1,0 +1,21 @@
+<ion-view>
+  <ion-side-menus>
+    <ion-pane ion-side-menu-content>
+      <ion-nav-bar type="bar"></ion-nav-bar>
+      <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-pane> 
+    <ion-side-menu side="left" width="getWidth();" class="side-menu">
+      <header class="bar bar-header">
+        <div class="title">Navigation</div>
+      </header>
+      <ion-content has-header="true">
+        <ul class="list">
+          <a href="#/main/offersFeed" class="item" ng-click="sideMenuController.toggleLeft();">Live Feed</a>
+          <a href="#/main/transactions" class="item" ng-click="sideMenuController.toggleLeft();">Transaction History</a>
+          <a href="#/main/account" class="item" ng-click="sideMenuController.toggleLeft();">About</a>
+          <a class="item" ng-click="logout()">Logout</a>
+        </ul>
+      </ion-content>
+    </ion-side-menu>
+  </ion-side-menus>
+</ion-view>

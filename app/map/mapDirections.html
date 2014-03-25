@@ -1,0 +1,14 @@
+<ion-view title="'Directions'" left-buttons="backToDeal">
+  <ion-nav-bar type="bar"></ion-nav-bar>
+  <ion-content scroll="true" has-header="true">
+
+  	<div ng-app="googleMap"></div>
+		<div id="direction-wrapper" ng-controller="mapCtrl">
+  		<div ng-if='geo' class='container'>
+    		<div ng-if='userGeo' class='container'>
+      		<div id="map_canvas" map-direction class="direction"> </div>
+    		</div>
+  		</div>
+		</div>
+  </ion-content>
+</ion-view>  

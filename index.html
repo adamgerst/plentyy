@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Plentyy</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="css/ionic.css" rel="stylesheet">
+    <link href="css/plentyy.css" rel="stylesheet">
+    
+    <script src="js/ionic.bundle.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTMxNH5qf9VYlAueWbCo7sxGZxxuUKDv8&sensor=false">
+    </script>
+
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="https://js.stripe.com/v2/"></script>    
+    <script src="sourceCode/firebaseLogin.js"></script> 
+    <script src="sourceCode/firebaseSource.js"></script>
+    <script src="sourceCode/angular-route.js"></script>
+    <script src="sourceCode/angularFire.js"></script>
+    <script src="sourceCode/underscore-min.js"></script>
+
+    <script src="app/helpers/services.js"></script>
+    <script src="app/indexPage/mainApp.js"></script>
+    <script src="app/indexPage/indexCtrl.js"></script>
+    <script src="app/offersFeed/offersFeedCtrl.js"></script>
+    <script src="app/offersFeed/singleDealCtrl.js"></script>
+    <script src="app/offersFeed/modalDrt.js"></script>
+    <script src="app/offersFeed/backgroundImageDrt.js"></script>
+    <script src="app/dealDetail/dealDetailCtrl.js"></script>
+    <script src="app/map/mapCtrl.js"></script>
+    <script src="app/map/mapDrt.js"></script>
+    <script src="app/map/directionDrt.js"></script>
+    <script src="app/payment/paymentCtrl.js"></script>
+    <script src="app/account/accountCtrl.js"></script>
+    <script src="app/account/passwordDrt.js"></script>
+    <script src="app/user/userCtrl.js"></script>
+    <script src="js/angular/angular-resource.js"></script>
+
+    <script src="app/dealCountDown/dealTimerDrt.js"></script>
+
+    <script src="app/helpers/routeSecurity.js"></script>
+    <script src="app/helpers/waitForAuth.js"></script>
+
+    <script src="app/services/appConfig.js"></script>
+    <script src="app/services/serviceFirebase.js"></script>
+    <script src="app/services/serviceLogin.js"></script>
+    <script src="app/services/serviceUserdata.js"></script>
+    <script src="app/services/geoService.js"></script>
+    <script src="app/services/serviceDealData.js"></script>
+    <script src="app/services/servicePassInfo.js"></script>
+    <script src="app/services/serviceGeofire.js"></script>
+    <script src="app/services/serviceGeoGoogle.js"></script>
+    <script src="app/services/serviceTransactionData.js"></script>
+    <script src="app/services/serviceMerchantData.js"></script>
+    <script src="app/services/serviceHelpers.js"></script>
+    
+    <script src="cordova.js"></script>
+
+  </head>
+  <body ng-app="plentyyApp">    
+
+    <ion-nav-view>
+    </ion-nav-view>
+    
+  </body>
+</html> 

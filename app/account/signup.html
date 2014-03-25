@@ -1,0 +1,30 @@
+<ion-view title="'Sign Up'" left-buttons="backTo">
+  <ion-nav-bar></ion-nav-bar>
+    <ion-content has-header="true" padding="true">
+      <a href="#/inhouseLogin" class="button icon-left ion-checkmark-round button-block button-confirm">ALREADY HAVE AN ACCOUNT?</a>
+    <form name="inhouse" class="list">
+      <label class="item item-input formInput">
+        <input type="text" placeholder="First Name" ng-model="newAccount.firstName" required>
+      </label>
+        <label class="item item-input formInput">
+        <input type="text" placeholder="Last Name" ng-model="newAccount.lastName" required>
+      </label>
+      <label class="item item-input formInput">
+        <input type="email" name="email" placeholder="Email Address" ng-model="newAccount.email" required>
+      </label>
+      <span class="error" ng-show="inhouse.email.$error.email">
+        Please enter a valid email address</span>
+      <label class="item item-input formInput">
+        <input type="password" name="password" placeholder="Password" ng-model="newAccount.pass" ng-minlength="6" id="pw1" required>
+      </label>
+      <span class="error" ng-show="inhouse.password.$error.minlength">
+          Password must contain at least 6 characters</span>
+      <label class="item item-input formInput">
+        <input type="password" placeholder="Confirm Password" ng-model="newAccount.confirm" pw-drt="newAccount.pass" name="confirm" required>
+      </label>
+        <span class="error" ng-show="inhouse.confirm.$error.unique">
+          Passwords do not match.</span>
+      <input type="submit" class="button button-full button-assertive" value="Submit" ng-disabled="inhouse.$invalid" ng-click="createAccount()">
+    </form>
+  </ion-content>
+</ion-view>
